@@ -5,3 +5,9 @@
 /T5/
 /T6/
 /shangcg/
+*.class
+*.apk
+bin/
+gen/
+.settings/
+proguard/
