@@ -3,7 +3,7 @@ package T5;
 public class ShellSort {
 	int a[];
 	public ShellSort() {
-		a = new int[]{8,19,2,3,100,99,1000,888,-1,0};
+		a = new int[]{3,7,5,2,6};
 		
 		
 		/*
@@ -28,19 +28,19 @@ public class ShellSort {
 	
 	public void shellSort(){
 		int n = a.length;
-		/*分组排序：分组的规则
+		/*分组排序：分组的规则 d为增量
 		 * 1.d = 数组长度/2;
 		 * 2.d = d/2;
 		 * 
 		 */
 		for(int d=n/2;d>0;d/=2){
-//			System.out.println("d="+d+"时的排序情况");
+			System.out.println("d="+d+"时的排序情况");
 			//插入排序
 			for(int i=0;i<d;i++){ //增量为1时排序结束
 				//遍历所有子序
-//				System.out.print(i+"\t");
+				System.out.print("i值:"+i+"\t");
 				for(int j=i+d;j<n;j+=d){
-//					System.out.print(j+"\t");
+					System.out.print("j值："+j+"\t");
 					//对每个子序进行插入排序
 					int insertNode = a[j];
 					int k=j-d;

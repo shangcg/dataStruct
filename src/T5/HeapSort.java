@@ -80,7 +80,7 @@ public class HeapSort {
         boolean isChange=false;  
         //k的初始值就是最大的一个非终端节点
         for(int k=(high-1)/2;k >= 0;k--){  
-            //找到最后一个父节点  
+              
             int left=2*k+1;  	//左孩子的下标
             int right=left+1;  //右孩子的下标
             //判断是否有节点  
@@ -103,11 +103,15 @@ public class HeapSort {
 //            System.out.println("递归："+Arrays.toString(array));  
         }  
 	}
+	
 	//交换数组中两个数的方法，因为要多次用到，封装成一个方法；  
-    public static void switchData(int[] array,int index1 ,int index2){  
-        array[index1] ^= array[index2];  
-        array[index2] ^= array[index1];  
-        array[index1] ^= array[index2];  
+    public static void switchData(int[] arr,int index1 ,int index2){  
+//        array[index1] ^= array[index2];  
+//        array[index2] ^= array[index1];  
+//        array[index1] ^= array[index2];  
+    	int temp = arr[index1];
+		arr[index1] = arr[index2];
+		arr[index2] = temp;
     }  
     public void print(){
 		for(int i=0;i<a.length;i++){
