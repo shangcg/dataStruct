@@ -2,6 +2,7 @@ package shangcg;
 
 import java.util.Random;
 
+
 public class BaseTool {
 	
 	
