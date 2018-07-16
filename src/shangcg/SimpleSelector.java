@@ -3,13 +3,21 @@ package shangcg;
 public class SimpleSelector {
 	
 	void selectorSort(int[] a){
-		for(int i=0; i<a.length-1; i++){
-			for(int j=i+1;j<a.length-1;j++){
-				if(a[j]<a[j-1]){
-					int temp = a[j-1];
-					a[j-1] = a[j];
-					a[j] = temp;
+		
+		for(int i=0; i<a.length; i++){
+			
+			int min = i;
+			
+			for(int j=i; j<a.length; j++){
+				if(a[j] < a[min]){
+					min = j;
 				}
+			}
+			
+			if(min != i){
+				int temp = a[i];
+				a[i] = a[min];
+				a[min] = temp;
 			}
 		}
 	}

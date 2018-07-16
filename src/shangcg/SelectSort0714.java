@@ -13,9 +13,9 @@ public class SelectSort0714 {
 		for(int i=0; i<a.length; i++){
 			int min = i;
 			
-			for(int j=i; j<a.length-1; j++){
-				if (a[j] >a[j+1]) {
-					min = j+1;
+			for(int j=i; j<a.length; j++){
+				if (a[j] < a[min]) {
+					min = j;
 				}
 			}
 			if (min !=i) {
